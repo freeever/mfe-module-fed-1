@@ -206,7 +206,7 @@
 			"prefix": "app",
 			"architect": {
 				"build": {
-					"builder": "@angular-devkit/build-angular:browser",
+					"builder": "ngx-build-plus:browser",
 					"options": {
 						"outputPath": "dist/carts-app",
 						"index": "projects/carts-app/src/index.html",
@@ -222,7 +222,9 @@
 						"styles": [
 							"projects/carts-app/src/styles.css"
 						],
-						"scripts": []
+						"scripts": [],
+						"extraWebpackConfig": "projects/carts-app/webpack.config.js",
+						"commonChunk": false
 					},
 					"configurations": {
 						"production": {
@@ -238,7 +240,8 @@
 									"maximumError": "4kb"
 								}
 							],
-							"outputHashing": "all"
+							"outputHashing": "all",
+							"extraWebpackConfig": "projects/carts-app/webpack.prod.config.js"
 						},
 						"development": {
 							"buildOptimizer": false,
@@ -252,21 +255,28 @@
 					"defaultConfiguration": "production"
 				},
 				"serve": {
-					"builder": "@angular-devkit/build-angular:dev-server",
+					"builder": "ngx-build-plus:dev-server",
 					"configurations": {
 						"production": {
-							"browserTarget": "carts-app:build:production"
+							"browserTarget": "carts-app:build:production",
+							"extraWebpackConfig": "projects/carts-app/webpack.prod.config.js"
 						},
 						"development": {
 							"browserTarget": "carts-app:build:development"
 						}
 					},
-					"defaultConfiguration": "development"
+					"defaultConfiguration": "development",
+					"options": {
+						"port": 4000,
+						"publicHost": "http://localhost:4000",
+						"extraWebpackConfig": "projects/carts-app/webpack.config.js"
+					}
 				},
 				"extract-i18n": {
-					"builder": "@angular-devkit/build-angular:extract-i18n",
+					"builder": "ngx-build-plus:extract-i18n",
 					"options": {
-						"browserTarget": "carts-app:build"
+						"browserTarget": "carts-app:build",
+						"extraWebpackConfig": "projects/carts-app/webpack.config.js"
 					}
 				},
 				"test": {
