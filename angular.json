@@ -129,9 +129,12 @@
 							"projects/products-app/src/assets"
 						],
 						"styles": [
-							"projects/products-app/src/styles.css"
+							"projects/products-app/src/styles.css",
+							"./node_modules/bootstrap/dist/css/bootstrap.min.css"
 						],
-						"scripts": [],
+						"scripts": [
+							"./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+						],
 						"extraWebpackConfig": "projects/products-app/webpack.config.js",
 						"commonChunk": false
 					},
@@ -230,9 +233,12 @@
 							"projects/carts-app/src/assets"
 						],
 						"styles": [
-							"projects/carts-app/src/styles.css"
+							"projects/carts-app/src/styles.css",
+							"./node_modules/bootstrap/dist/css/bootstrap.min.css"
 						],
-						"scripts": [],
+						"scripts": [
+							"./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+						],
 						"extraWebpackConfig": "projects/carts-app/webpack.config.js",
 						"commonChunk": false
 					},
@@ -331,9 +337,12 @@
 							"projects/orders-app/src/assets"
 						],
 						"styles": [
-							"projects/orders-app/src/styles.css"
+							"projects/orders-app/src/styles.css",
+							"./node_modules/bootstrap/dist/css/bootstrap.min.css"
 						],
-						"scripts": [],
+						"scripts": [
+							"./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+						],
 						"extraWebpackConfig": "projects/orders-app/webpack.config.js",
 						"commonChunk": false
 					},
