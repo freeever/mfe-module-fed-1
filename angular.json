@@ -176,8 +176,8 @@
 					},
 					"defaultConfiguration": "development",
 					"options": {
-						"port": 6000,
-						"publicHost": "http://localhost:6000",
+						"port": 2000,
+						"publicHost": "http://localhost:2000",
 						"extraWebpackConfig": "projects/products-app/webpack.config.js"
 					}
 				},
